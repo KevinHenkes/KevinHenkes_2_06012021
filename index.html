@@ -2,36 +2,56 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <script src="https://kit.fontawesome.com/aa971b92d0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css" />
         <title></title>
     </head>
     <body>
-        <header>
-            <h1>Reservia</h1>
-            <h2>Trouvez votre hébergements pour des vacances de rêve</h2>
-            <h3>En plein centre ville ou en pleine nature</h3>
-            <form>
-                <label></label>
-                <input type="search" />
-                <input type="submit" value="Rechercher" />
-                <button type="button"><img />Économique</button>
-                <button type="button"><img />Familial</button>
-                <button type="button"><img />Romantique</button>
-                <button type="button"><img />Animaux autorisés</button>
-            </form>
-            <p>
-                <span></span>Plus de 500 logements sont disponibles dans cette
-                ville
-            </p>
-        </header>
-        <nav>
-            <ul>
-                <li>Hébergements</li>
-                <li>Activités</li>
-                <li>S'inscire</li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <header>
+                <img src="images/logo/Reservia.svg" />
+                <h1>Trouvez votre hébergements pour des vacances de rêve</h1>
+                <h2>En plein centre ville ou en pleine nature</h2>
+                <form>
+                    <label><i class="fas fa-map-marker-alt"></i></label>
+                    <input type="search" />
+                    <input type="submit" value="Rechercher" />
+
+                    <input type="radio" id="economic" name="categories" value="economic"><img /></input>
+                    <input type="radio" id="family" name="categories" value="family"><img /></input>
+                    <input type="radio" id="romantic" name="categories" value="romantic"><img /></input>
+                    <input type="radio" id="animals" name="categories" value="animals"><img /></input>
+         
+                    <ol class="filters">
+                        <li>
+                          <label for="economic">Économique</label>
+                        </li>
+                        <li>
+                          <label for="family">Familial</label>
+                        </li>
+                        <li>
+                          <label for="romantic">Romantique</label>
+                        </li>
+                        <li>
+                          <label for="animals">Animaux autorisés</label>
+                        </li>
+                      </ol>
+                </form>
+                <p>
+                    <span></span>Plus de 500 logements sont disponibles dans cette
+                    ville
+                </p>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#">Hébergements</a></li>
+                    <li><a href="#">Activités</a></li>
+                    <li><a class="registration" href="#">S'inscire</a></li>
+                </ul>
+            </nav>
+        </div>
         <section>
-            <h2>Hébergements à Marseille</h2>
+            <h3>Hébergements à Marseille</h2>
             <article>
                 <ul>
                     <li>
@@ -97,7 +117,7 @@
                 </ul>
             </article>
             <article>
-                <h2>Les plus populaires</h2>
+                <h3>Les plus populaires</h3>
                 <li>
                     <img />
                     <p>Hôtel Le soleil du matin</p>
@@ -131,7 +151,7 @@
             </article>
         </section>
         <section>
-            <h2>Activités à Marseille</h2>
+            <h3>Activités à Marseille</h3>
             <ul>
                 <li>
                     <img />
@@ -162,18 +182,18 @@
             </ul>
         </section>
         <footer>
-            <h3>A propos</h3>
+            <h4>A propos</h4>
             <ul>
                 <li>Fonctionnement du site</li>
                 <li>Conditions générale de vente</li>
                 <li>Données et confidentialité</li>
             </ul>
-            <h3>Nos hébergements</h3>
+            <h4>Nos hébergements</h4>
             <ul>
                 <li>Charte qualité</li>
                 <li>Soumettre votre hôtel</li>
             </ul>
-            <h3>Assistance</h3>
+            <h4>Assistance</h4>
             <ul>
                 <li>Centre d'aide</li>
                 <li>Nous contacter</li>

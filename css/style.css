@@ -1,0 +1,132 @@
+/* Global */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header h1 {
+    font-size: large;
+}
+
+header h2 {
+    font-size: smaller;
+    font-weight: normal;
+}
+
+/* Nav */
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 0em 1em;
+}
+
+nav ul li a {
+    position: relative;
+    padding: 0 20%;
+    color: black;
+}
+
+nav ul li a::before {
+    content: '';
+    height: 2px;
+    background: #0065fc;
+    position: absolute;
+    bottom: 150%;
+    left: -10%;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #0065fc;
+}
+
+.registration {
+    font-weight: bold;
+    color: #0065fc;
+}
+
+/* Search box */
+header form label {
+    background-color: #f2f2f2;
+}
+
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --black: #3a3a3a;
+    --white: #fff;
+    --green: #49b293;
+}
+
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+/* FILTERS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.filters * {
+    display: inline-block;
+}
+
+.filters label {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 2rem;
+    min-width: 50px;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.filters label:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+/* FILTERING RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[value='economic']:checked ~ .filters [for='economic'],
+[value='family']:checked ~ .filters [for='family'],
+[value='romantic']:checked ~ .filters [for='romantic'],
+[value='animals']:checked ~ .filters [for='animals'] {
+    background: var(--green);
+    color: var(--white);
+}
