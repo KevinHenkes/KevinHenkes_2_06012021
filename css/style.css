@@ -37,7 +37,7 @@ nav ul {
 }
 
 nav ul li {
-    padding: 0em 1em;
+    padding: 0rem 1rem;
 }
 
 nav ul li a {
@@ -69,20 +69,54 @@ nav ul li a:hover {
 }
 
 /* Search box */
-header form label {
+.search-input {
+    border-color: #f2f2f2;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    outline: none;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
+.search-btn {
+    border-radius: 0 20% 20% 0;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-color: #0065fc;
+    background-color: #0065fc;
+    color: white;
+}
+
+.localisation {
+    padding: 0.75rem;
     background-color: #f2f2f2;
+    border-radius: 40% 0 0 40%;
 }
 
-/* RESET RULES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-:root {
-    --black: #3a3a3a;
-    --white: #fff;
-    --green: #49b293;
+.search-container {
+    display: flex;
+    margin-top: 1rem;
 }
 
-ol {
+/* Filters */
+
+.filter-container {
+    display: flex;
+}
+
+.filter-title-selector {
+    padding: 0.5rem 0.5rem 0.5rem 0rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+ul {
     list-style: none;
+    margin: 0;
 }
 
 a {
@@ -99,34 +133,43 @@ input[type='radio'] {
     display: none;
 }
 
-/* FILTERS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .filters * {
     display: inline-block;
 }
 
 .filters label {
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.25rem;
-    border-radius: 2rem;
-    min-width: 50px;
+    border-radius: 5rem;
     line-height: normal;
     cursor: pointer;
     transition: all 0.1s;
+    border-color: #f2f2f2;
+    border-style: solid;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .filters label:hover {
-    background: var(--green);
-    color: var(--white);
+    background: #0065fc;
+    color: white;
 }
 
-/* FILTERING RULES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-[value='economic']:checked ~ .filters [for='economic'],
-[value='family']:checked ~ .filters [for='family'],
-[value='romantic']:checked ~ .filters [for='romantic'],
-[value='animals']:checked ~ .filters [for='animals'] {
-    background: var(--green);
-    color: var(--white);
+.filters label p {
+    padding: 0 1rem;
+    margin: 0;
+}
+
+.filters li label i {
+    border-radius: 100%;
+    background-color: #deebff;
+    color: #0065fc;
+    padding: 0.5rem;
+}
+
+.info-icon {
+    color: #0065fc;
+    border-color: #f2f2f2;
+    border-style: solid;
+    border-radius: 1rem 1rem 1rem 1rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 1rem;
 }
